@@ -3,10 +3,11 @@
 <h3 align="center">Project Description</h3>
 <p align="left">
     This repo is a clone of my dissertation, which was submitted to the University of Liverpool 
-    as required for my Masters in Computer Science.  Within it, a optical-tactile-based-sensor (GelSight)
-    is simulated and appeneded to UR5 arm within a Mujoco environment.  Mujoco, is a physics based 
-    engine, which was utilised to train a deep reinforcement learning agent in similar environments
-    found in OpenAi's gym.
+    as required for my Masters in Computer Science.  Within it, two optical-tactile-based-sensors (GelSight)
+    are simulated and appended to a UR5 arm.  Mujoco is used as the simulation environment - a physics extension to
+    OpenAi's gym. This platform was utilised to construct the environments Reach, Push, Slide and PickandPlace
+    (similar to those found within gym).  Which in turn act as a test-bed for training a deep reinforcement 
+    learning agent using both Double Deep Q-Learning (DDQN) and Hierarchical Double Deep Q-Learning (HDDQN).
 </p>
 
 <h3 align="left">Languages and Tools:</h3>
