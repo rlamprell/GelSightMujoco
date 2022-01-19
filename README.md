@@ -1,5 +1,4 @@
 <h1 align="center">OpenAI Test-Bed of Contact Based Grasping for Reinforcement Learning</h1>
-<h2 align="center">Rob Lamprell</h2>
 
 <h3 align="center">Project Description</h3>
 <p align="left">
