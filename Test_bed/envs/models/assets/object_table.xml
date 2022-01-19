@@ -1,0 +1,24 @@
+<!--
+    Table for the the target object, target position and robot arm to sit on
+-->
+
+<mujoco model="ob_table">
+
+    <body name="object_table" pos="0 0 0">
+        <!-- surface -->
+        <geom name="surface" type="box" pos="0 0 0" size=".275 .275 .015" conaffinity="32" contype="32" mass="1" rgba="1 1 1 1"
+            friction="1 0.05 0.01" solimp="1.1 1.2 0.001 0.5 2" solref="0.02 1"/>
+        
+        <!-- valid spawn areas for target objects and positions -->
+        <!-- makes the objects spawn in front of the arm only-->
+        <geom name="spawn surface" type="box" pos="-.095 0 .016" size=".12 .245 .00001" conaffinity="0" contype="0" mass="0" rgba="1 1 0 0"/>
+
+        <!-- legs -->
+        <body pos="0 0 -.3">
+            <geom name="leg0" type="box" pos="0.26 0.26 0" size="0.015 0.015 .3" conaffinity="32" contype="1" friction="1 0.05 0.01" solimp="1.1 1.2 0.001 0.5 2" solref="0.02 1"/>
+            <geom name="leg1" type="box" pos="-.26 -.26 0" size="0.015 0.015 .3" conaffinity="32" contype="1" friction="1 0.05 0.01" solimp="1.1 1.2 0.001 0.5 2" solref="0.02 1"/>
+            <geom name="leg2" type="box" pos="0.26 -.26 0" size="0.015 0.015 .3" conaffinity="32" contype="1" friction="1 0.05 0.01" solimp="1.1 1.2 0.001 0.5 2" solref="0.02 1"/>
+            <geom name="leg3" type="box" pos="-.26 0.26 0" size="0.015 0.015 .3" conaffinity="32" contype="1" friction="1 0.05 0.01" solimp="1.1 1.2 0.001 0.5 2" solref="0.02 1"/>
+        </body>
+    </body>
+</mujoco>

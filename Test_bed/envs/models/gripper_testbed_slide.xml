@@ -1,0 +1,155 @@
+<!-- 
+    Slide Env
+    Contains an object and position target (object has no z-axis on the target object, so it can only slide)
+-->
+
+
+<mujoco model="Gelsight Gripper Slide">
+
+    <compiler angle="radian" meshdir="meshes" balanceinertia="true"/>
+    
+    <default>
+        <light castshadow="false" diffuse="1 1 1" />
+        <camera fovy="60" />
+        <motor ctrllimited="true" ctrlrange="-0.04 0.04"/>
+        <joint range="-1.5708 1.5708"/>
+    </default>
+
+    <visual>
+        <rgba connect="1 0.2 1 1" joint="0.2 0.6 0.8 1"/>
+        <map fogstart="3" fogend="5"/>
+        <quality shadowsize="2048"/>
+    </visual>
+
+    <option gravity="0 0 -9.81" iterations="100"/>
+
+    <custom>
+        <numeric name="N_GRIPPER_JOINTS" data="0" />
+    </custom>
+
+    <asset>
+        <!-- gelsight models-->
+        <mesh name="gelsight_glass" file="glass.stl"                scale="0.0009 0.00125 0.001"/>
+        <mesh name="front_cover"    file="mountable_gelsight.stl"   scale="0.001 0.001 0.001"/>
+        <mesh name="back_cover"     file="back_cover.stl"           scale="0.001 0.001 0.001"/>
+
+        <material name="black_resin"         rgba="0.1 0.1 0.1 1"></material>
+        <material name="gray_elastomer"      rgba="0.8 0.8 0.8 1"></material>
+        <material name="transparent_glass"   rgba="0.9 0.95 1 0.7"></material>
+
+        <!-- gripper model (linked joints)-->
+        <mesh name="base0"           file="base0.stl"         scale="0.001 0.001 0.001"/>
+        <!-- lhs -->
+        <mesh name="grip_finger01"   file="finger01.stl"      scale="0.001 0.001 0.001"/>
+        <mesh name="grip_finger02"   file="finger02.stl"      scale="0.001 0.001 0.001"/>
+        <mesh name="grip_finger03"   file="finger03.stl"      scale="0.001 0.001 0.001"/>
+        <mesh name="grip_finger04"   file="finger04.stl"      scale="0.001 0.001 0.001"/>
+        <mesh name="grip_finger0tip" file="finger0tip.stl"    scale="0.001 0.001 0.001"/>
+        <!-- rhs -->
+        <mesh name="grip_finger11"   file="finger11.stl"      scale="0.001 0.001 0.001"/>
+        <mesh name="grip_finger12"   file="finger12.stl"      scale="0.001 0.001 0.001"/>
+        <mesh name="grip_finger13"   file="finger13.stl"      scale="0.001 0.001 0.001"/>
+        <mesh name="grip_finger14"   file="finger14.stl"      scale="0.001 0.001 0.001"/>
+        <mesh name="grip_finger1tip" file="finger1tip.stl"    scale="0.001 0.001 0.001"/>
+
+        <!-- arm models -->
+        <mesh file="link0.stl"/>
+        <mesh file="link1.stl"/>
+        <mesh file="link1_cap.stl" />
+        <mesh file="link1_connector.stl" />
+        <mesh file="link2.stl" />
+        <mesh file="link2_tube.stl" />
+        <mesh file="link2_cap.stl" />
+        <mesh file="link2_connector.stl" />
+        <mesh file="link3a.stl" />
+        <mesh file="link3a_connector.stl" />
+        <mesh file="link3_tube.stl" />
+        <mesh file="link3_cap.stl" />
+        <mesh file="link3b.stl" />
+        <mesh file="link3b_connector.stl" />
+        <mesh file="link3b_connector2.stl"/>
+        <mesh file="link4.stl" />
+        <mesh file="link4_cap.stl" />
+        <mesh file="link4_connector.stl" />
+        <mesh file="link5.stl" />
+        <mesh file="link5_cap.stl" />
+        <mesh file="link5_connector.stl" />
+        <mesh file="link6.stl" />
+        <mesh file="link6_connector.stl" />
+
+        <texture  name="floor_tile" file="meshes/floor_tile.png" width="3000" height="3000" type="2d"/>
+        <material name="tile" texture="floor_tile" specular="0" shininess="0" reflectance="0" emission="1" />
+        <material name="silver" specular="1" shininess="0.5" reflectance="1" emission="0.25" rgba="0.82 0.82 0.82 1"/>
+        <material name="grey" specular="1" shininess="0.5" reflectance="1" emission="0.1" rgba="0.5 0.5 0.5 1"/>
+        <material name="blue" specular="1" shininess="0.5" reflectance="1" emission="0" rgba="0.678 0.847 0.902 1"/>
+        <material name="black" specular="1" shininess="0.5" reflectance="1" emission="0" rgba="0.2 0.2 0.2 1"/>
+    </asset>
+
+
+    <worldbody>
+        <light name="light3" mode="targetbody" target="table" directional="true" pos="1 1 3" castshadow="true"
+            ambient="0 0 0" diffuse= "0.3 0.3 0.3" specular="0.3 0.3 0.3"/>
+
+        <!-- floor -->
+        <body>
+            <geom name="floor_grey_tile" pos="0 0 -0.001" size="2 2 0.05" type="plane" material="tile" contype="32" conaffinity="32" 
+                friction="1 0.05 0.01" solimp="1.1 1.2 0.001 0.5 2" solref="0.02 1"/>
+        </body>
+
+        <!-- Target Object -->
+        <body name="target object" pos="-0.17 0 .62">  
+            <joint name="ball_x" type="slide" limited="false" range="-0.21 0.09" pos="0 0 0" axis="1 0 0" />
+            <joint name="ball_y" type="slide" limited="false" range="-0.15 0.15" pos="0 0 0" axis="0 1 0" />
+            <!--<include file="assets/target_object_slide.xml"/>-->
+            <include file="assets/target_object.xml"/>
+        </body>
+
+        <!-- box for the obect to sit on -->
+        <body name="table" pos="-.2 0 .6">
+            <include file="assets/object_table.xml"/>
+        </body>
+
+        <!-- UR5 Arm & Gripper -->
+        <body name="arm and gripper" pos="0 0 .615">
+            <include file="assets/gripper_and_arm.xml"/>
+        </body>
+
+        <!-- Extrinsic Agent Cam -->
+        <body>
+            <camera name="extrinsic_cam" mode="fixed" pos="-0.8 0 1.4" euler="0 5.5 -1.5708" fovy="50"/>
+        </body>
+
+        <!-- Target Position -->
+        <body name="target position" pos="-0.355 0 0.62">
+            <include file="assets/target_position.xml"/>
+        </body>
+    </worldbody>
+
+    <!-- Joints requiring a child body to have two parents -->
+    <equality>
+        <!-- LHS -->
+        <connect name="f2_to_f4"    active="true" body1="f2"    body2="f4"  anchor="-0.069 0.098 .0935" solref="0.01 7" solimp="1 1 0.5 1 1"/>
+        <!-- RHS -->
+        <connect name="f2_to_f4_1"  active="true" body1="f2_1"  body2="f4_1" anchor="0.069 0.098 .0935" solref="0.01 7" solimp="1 1 0.5 1 1"/>
+    </equality>
+
+    <!-- Camera settings -->
+    <visual>
+        <!-- allows the camera to fit into smaller spaces without clipping through -->
+        <map znear="0.001" zfar="1000"/>
+    </visual>
+
+    <!-- Mujoco accesses these in an ordered array (highest to lowest) -->
+    <actuator>
+        <!-- Gripper Joints -->
+        <motor gear="100" name="finger0_joint1_motor" joint="gripper:finger0_joint0" ctrllimited="true" ctrlrange="-0.03 0.03" forcelimited="true" forcerange="-0.03 0.03"/>
+        <motor gear="100" name="finger1_joint1_motor" joint="gripper:finger1_joint0" ctrllimited="true" ctrlrange="-0.03 0.03" forcelimited="true" forcerange="-0.03 0.03"/>/>
+        <!-- Arm Joints-->
+        <motor gear="100" name="arm_joint0_motor" joint="robot:joint0" ctrllimited="true" ctrlrange="-10 10" forcelimited="true" forcerange="-10 10"/>
+        <motor gear="100" name="arm_joint1_motor" joint="robot:joint1" ctrllimited="true" ctrlrange="-10 10" forcelimited="true" forcerange="-10 10"/>
+        <motor gear="100" name="arm_joint2_motor" joint="robot:joint2" ctrllimited="true" ctrlrange="-10 10" forcelimited="true" forcerange="-10 10"/>
+        <motor gear="100" name="arm_joint3_motor" joint="robot:joint3" ctrllimited="true" ctrlrange="-10 10" forcelimited="true" forcerange="-10 10"/>
+        <motor gear="100" name="arm_joint4_motor" joint="robot:joint4" ctrllimited="true" ctrlrange="-10 10" forcelimited="true" forcerange="-10 10"/>
+        <motor gear="100" name="arm_joint5_motor" joint="robot:joint5" ctrllimited="true" ctrlrange="-10 10" forcelimited="true" forcerange="-10 10"/>
+    </actuator>
+</mujoco> 

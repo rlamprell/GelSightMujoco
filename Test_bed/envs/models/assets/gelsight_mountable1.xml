@@ -1,0 +1,31 @@
+<!--
+    Second Gelsight model to be attached to the Robot Arm
+-->
+
+<mujoco model="gelsight_mountable1">
+
+    <body name="gelsight_sensor_body1" pos="0 0 0">
+        <!--Front and Back-->
+        <geom name="gelsight1:front" type="mesh" material="black_resin"        mesh="front_cover" mass="0.05" contype="32" conaffinity="32" friction="1 0.05 0.01" solimp="1.1 1.2 0.001 0.5 2" solref="0.02 1"/>
+        <geom name="gelsight1:back"  type="mesh" material="black_resin"        mesh="back_cover"  mass="0.05" contype="32" conaffinity="32" friction="1 0.05 0.01" solimp="1.1 1.2 0.001 0.5 2" solref="0.02 1"/>
+
+        <!--Glass Cover-->
+        <geom name="gelsight1:glass0" type="mesh" material="transparent_glass"  mesh="gelsight_glass" mass="0.005" contype="32" conaffinity="32"  pos="-0.011 0 0.029"/>
+        <geom name="gelsight1:glass1" type="mesh" material="transparent_glass"  mesh="gelsight_glass" mass="0.005" contype="32" conaffinity="32"  pos="0.0115 0 0.029" quat="0 0 0 1"/>
+
+        <!--Elastomer-->
+        <geom name="gelsight1:elastomer" type="box" size="0.013 0.013 0.001" euler="0 0 0" pos="0 0 0.033" contype="0" conaffinity="32" rgba="0.9 0.95 1 0.1"/>
+
+        <!--Elastomer Cover-->
+        <geom name="gelsight1:elastCover" type="box" size="0.013 0.013 0.00001" euler="0 0 0" pos="0 0 0.034001" contype="0" conaffinity="32" material="black_resin"
+                friction="1 0.05 0.01" solimp="1.1 1.2 0.001 0.5 2" solref="0.02 1"/>
+
+        <!--Gel Camera-->
+        <camera name="gelsight1:camera" mode="fixed" pos="0 0 0" euler="0 3.14159 -1.5708" fovy="20"/>
+
+        <!-- Friction placholder -->
+        <geom name="gelsight1:friction" type="box" size="0.013 0.013 0.00001" euler="0 0 0" pos="0 0 0.032" contype="32" conaffinity="32" rgba="0 0 0 0"
+                friction="1 0.05 0.01" solimp="1.1 1.2 0.001 0.5 2" solref="0.02 1"/>
+
+    </body>
+</mujoco>

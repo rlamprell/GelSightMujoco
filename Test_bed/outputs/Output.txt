@@ -1,0 +1,5 @@
+Episode 0     Success False      Score -3.153260632634465     Time 108
+Episode 1     Success False      Score -2.940479921409774     Time 108
+Episode 2     Success False      Score -3.7743738399129367     Time 108
+Episode 3     Success False      Score -2.0296885925240518     Time 108
+Episode 4     Success False      Score -2.076857552851562     Time 108Episode 0     Success False      Score -15.214020902158953     Time 100

@@ -1,0 +1,14 @@
+<!-- 
+    Target position for the gripper or object to reach
+-->
+<mujoco model="pos_target">
+
+    <body name="positional_marker" pos="0 0 0">
+        <!-- sphere -->
+        <geom name="target_pos" type="sphere" size=".03 .03 .03" conaffinity="0" contype="0" mass="0" rgba="1 0 1 0.6"
+            friction="1 0.05 0.01" solimp="1.1 1.2 0.001 0.5 2" solref="0.02 1"/>
+
+        <!-- site goal -->
+        <site name="goal:target_pos" pos="0 0 0" rgba="1 0 1 0" size="0.02 0.02 0.02"></site>
+    </body>
+</mujoco>

@@ -1,0 +1,117 @@
+Wed Jun 16 13:07:45 2021
+ERROR: GLEW initalization error: Missing GL version
+
+Wed Jun 16 13:08:06 2021
+ERROR: GLEW initalization error: Missing GL version
+
+Wed Jun 16 17:15:29 2021
+ERROR: GLEW initalization error: Missing GL version
+
+Thu Jun 17 16:37:34 2021
+ERROR: GLEW initalization error: Missing GL version
+
+Thu Jun 17 16:40:21 2021
+ERROR: GLEW initalization error: Missing GL version
+
+Thu Jun 17 16:42:14 2021
+ERROR: GLEW initalization error: Missing GL version
+
+Thu Jun 17 16:43:58 2021
+ERROR: GLEW initalization error: Missing GL version
+
+Thu Jun 17 16:46:48 2021
+ERROR: GLEW initalization error: Missing GL version
+
+Thu Jun 17 16:48:50 2021
+ERROR: GLEW initalization error: Missing GL version
+
+Thu Jun 17 17:04:12 2021
+ERROR: GLEW initalization error: Missing GL version
+
+Thu Jun 17 17:06:27 2021
+ERROR: GLEW initalization error: Missing GL version
+
+Thu Jun 17 17:06:38 2021
+ERROR: GLEW initalization error: Missing GL version
+
+Thu Jun 17 17:17:47 2021
+ERROR: GLEW initalization error: Missing GL version
+
+Thu Jun 17 17:23:58 2021
+ERROR: GLEW initalization error: Missing GL version
+
+Thu Jun 17 17:24:28 2021
+ERROR: GLEW initalization error: Missing GL version
+
+Thu Jun 17 17:25:04 2021
+ERROR: GLEW initalization error: Missing GL version
+
+Thu Jun 17 17:52:45 2021
+ERROR: GLEW initalization error: Missing GL version
+
+Thu Jun 17 18:26:40 2021
+ERROR: GLEW initalization error: Missing GL version
+
+Thu Jun 17 18:26:51 2021
+ERROR: GLEW initalization error: Missing GL version
+
+Thu Jun 17 18:32:37 2021
+ERROR: GLEW initalization error: Missing GL version
+
+Thu Jun 17 19:48:40 2021
+ERROR: GLEW initalization error: Missing GL version
+
+Thu Jun 17 20:11:58 2021
+ERROR: GLEW initalization error: Missing GL version
+
+Fri Jun 18 11:13:21 2021
+ERROR: GLEW initalization error: Missing GL version
+
+Fri Jun 18 11:23:58 2021
+ERROR: GLEW initalization error: Missing GL version
+
+Fri Jun 18 11:36:27 2021
+ERROR: GLEW initalization error: Missing GL version
+
+Fri Jun 18 11:37:50 2021
+ERROR: GLEW initalization error: Missing GL version
+
+Fri Jun 18 13:20:12 2021
+ERROR: GLEW initalization error: Missing GL version
+
+Sun Jun 20 17:40:55 2021
+ERROR: GLEW initalization error: Missing GL version
+
+Wed Jun 30 01:27:30 2021
+ERROR: Invalid activation key
+
+Sun Jul 25 19:43:08 2021
+ERROR: GLEW initalization error: Missing GL version
+
+Tue Jul 27 03:06:06 2021
+ERROR: GLEW initalization error: Missing GL version
+
+Wed Jul 28 00:51:53 2021
+ERROR: GLEW initalization error: Missing GL version
+
+Wed Jul 28 00:52:00 2021
+ERROR: GLEW initalization error: Missing GL version
+
+Wed Jul 28 20:39:39 2021
+ERROR: Shadow framebuffer is not complete, error 0x8cd6
+
+Wed Jul 28 21:31:59 2021
+ERROR: Shadow framebuffer is not complete, error 0x8cd6
+
+Fri Jul 30 15:58:41 2021
+ERROR: Fixed camera id is outside valid range
+
+Sat Jul 31 00:00:07 2021
+ERROR: Expired activation key
+
+Sat Jul 31 00:00:18 2021
+ERROR: Expired activation key
+
+Tue Aug 10 20:43:28 2021
+ERROR: Fixed camera id is outside valid range
+

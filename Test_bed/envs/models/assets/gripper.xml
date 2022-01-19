@@ -1,0 +1,75 @@
+<!-- 
+    UR5 Model taken from here:
+    https://github.com/abr/abr_control/blob/master/abr_control/arms/ur5/ur5.xml
+    
+    2F-85 Gripper stls taken from here:
+    https://robotiq.com/
+-->
+
+<mujoco model="Gripper">
+    <!-- gripper model-->
+    <body name="gripper_structure" pos="-0.03 0 -0.0935" euler="0 0 1.5708">
+
+        <body name="gripper_base" pos="0 0 0" euler="0 0 0">    
+                <site name="gripper:grip" pos="0 0.165 0.1" rgba="1 0 1 0" size="0.02 0.02 0.02"/>
+            <geom name="gripper base" type="mesh" material="black_resin" mesh="base0" mass="0.050" contype="32" conaffinity="32"/>
+
+            <!-- LHS -->
+            <body name="f1" pos="0 0 0">
+                <joint name="gripper:finger0_joint0" type="hinge" pos="-0.030 0.05 0.095"  axis="0 0 1" limited="true" range="-0.2 0.1" stiffness=".02" springref="3" frictionloss="1" damping=".002"/>
+                <geom type="mesh" material="silver" mesh="grip_finger01" mass="0.050" contype="32" conaffinity="32"/>
+
+                <body name="f2" pos="0 0 0">
+                    <geom name="g_f2" type="mesh" material="black_resin" mesh="grip_finger02" mass="0.050" contype="32" conaffinity="32" />
+                </body>
+            </body> 
+
+            <body name="f3" pos="0 0 0">
+                <joint name="gripper:finger0_joint4" type="hinge" pos="-0.012 0.06 0.095"  axis="0 0 1" stiffness=".02" springref="2" limited="true" range="-1.2 .2" />
+                <geom type="mesh" material="black_resin" mesh="grip_finger03" mass="0.050" contype="32" conaffinity="32"/>   
+
+                <body name="f4" pos="0 0 0.0005">
+                    <joint name="gripper:finger0_joint3" type="hinge" pos="-0.050 0.105 0.0935"  axis="0 0 1" stiffness=".02" springref="2"/>
+                    <geom name="g_f4" type="mesh" material="silver" mesh="grip_finger04" mass="0.050" contype="32" conaffinity="32"/>
+
+                    <body name="tip" pos="0 0 0">
+                        
+                        <!-- Gelsight Sensor -->
+                        <body name="gelsight_0" pos="-0.0765 0.1612 0.0942" euler="0 1.5708 -1.5708">
+                            <include file="assets/gelsight_mountable0.xml"/>
+                        </body>
+                    </body>
+                </body>
+            </body>
+
+            <!-- RHS -->
+            <body name="f1_1" pos="0 0 0">
+                <joint name="gripper:finger1_joint0" type="hinge" pos="0.030 0.05 0.095" axis="0 0 1" limited="true" range="-0.1 0.2" stiffness=".02" springref="-3" frictionloss="1" damping=".002"/>
+                <geom type="mesh" material="silver" mesh="grip_finger11" mass="0.050" contype="32" conaffinity="32"/>
+                
+                <body name="f2_1" pos="0 0 0">
+                    <geom name="g_f2_1" type="mesh" material="black_resin" mesh="grip_finger12" mass="0.050" contype="32" conaffinity="32"/>
+                </body>
+            </body> 
+
+            <body name="f3_1" pos="0 0 0">
+
+                <joint name="gripper:finger1_joint4" type="hinge" pos="0.012 0.06 0.095" axis="0 0 1" stiffness=".02" springref="-2" limited="true" range="-.2 1.2"/>
+                <geom type="mesh" material="black_resin" mesh="grip_finger13" mass="0.050" contype="32" conaffinity="32"/>      
+
+                <body name="f4_1" pos="0 0 0">
+                    <joint name="gripper:finger1_joint3" type="hinge" pos="0.050 0.105 0.0935" axis="0 0 1" stiffness=".02" springref="-2"/>
+                    <geom name="g_f4_1" type="mesh" material="silver" mesh="grip_finger14" mass="0.050" contype="32" conaffinity="32"/>
+
+                    <body name="tip_1" pos="0 0 0">
+
+                        <!-- Gelsight Sensor -->
+                        <body name="gelsight_1" pos="0.0765 0.1612 0.095" euler="0 -1.5708 -1.5708">
+                            <include file="assets/gelsight_mountable1.xml"/>
+                        </body>
+                    </body>
+                </body>
+            </body>     
+        </body>
+    </body>
+</mujoco>

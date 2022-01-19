@@ -1,0 +1,70 @@
+<!-- 
+    UR5 Model taken from here:
+    https://github.com/abr/abr_control/blob/master/abr_control/arms/ur5/ur5.xml
+    
+    2F-85 Gripper stls taken from here:
+    https://robotiq.com/
+-->
+
+<mujoco model="Gripper and Arm">
+    <!-- UR5 Arm & Gripper -->
+    <body name="base_link" pos="0 0 0">
+        <geom name="link0" type="mesh" mesh="link0" pos="0 0 0" conaffinity="32" contype="32"/>
+        
+        <body name="link1" pos="0 0 0.0213" euler="0 0 -1.5708">
+            <joint name="robot:joint0" axis="0 0 1" pos="0 0 0" limited="true" range="-6.28319 6.28319" springref="0" damping="100" frictionloss="100" stiffness="100"/> 
+            <inertial pos="0 -0.02561 0.00193" mass="0.03761" diaginertia="0.1 0.1 0.1"/>
+            <geom name="link1_connector" type="mesh" mesh="link1_connector" pos="0 0 0" material="black" conaffinity="32" contype="32"/>
+            <geom name="link1" type="mesh" mesh="link1" pos="0 0 0.008" material="grey" conaffinity="32" contype="32"/>
+            <geom name="link1_cap" type="mesh" mesh="link1_cap" pos="0 0 .1025" material="blue" conaffinity="32" contype="32"/>
+
+            <body name="link2" pos="-0.0663 0 0.0679" euler="-.9 0 0">
+                <joint name="robot:joint1" axis="-1 0 0" pos="0 0 0" limited="true" range="-6.28319 6.28319" springref="0"  damping="100" frictionloss="100" stiffness="100"/>
+                <inertial pos="-0.04706 0 0.2125" mass="0.08058" diaginertia="0.1 0.1 0.1"/>
+                <geom name="link2_connector" type="mesh" mesh="link2_connector" pos="0 0 0" material="black" conaffinity="32" contype="32"/>
+                <geom name="link2" type="mesh" mesh="link2" pos="-0.008 0 0" material="grey" conaffinity="32" contype="32"/>
+                <geom name="link2_cap" type="mesh" mesh="link2_cap" pos="-0.1015 0 -0.0025" material="blue" conaffinity="32" contype="32"/>
+                <geom name="link2_tube" type="mesh" mesh="link2_tube" pos="-0.0679 0 0.066" material="silver" contype="32" conaffinity="32"/>
+
+                <body name="link3" pos="-0.008 0 0.425" euler="2.7 0 0">
+                    <joint name="robot:joint2" axis="1 0 0" pos="0 0 0" limited="true" range="-6.28319 6.28319" springref="0"  damping="100" frictionloss="100" stiffness="100"/>
+                    <inertial pos="0.0478 0 0.15" mass="0.02846" diaginertia="0.1 0.1 0.1"/>
+                    <geom name="link3a_connector" type="mesh" mesh="link3a_connector" pos="0 0 0" material="black" conaffinity="32" contype="32"/>
+                    <geom name="link3a" type="mesh" mesh="link3a" pos="0.008 0 0" material="grey"/>
+                    <geom name="link3_tube" type="mesh" mesh="link3_tube" pos="0.059 0 0.066" material="silver" contype="32" conaffinity="32"/>
+                    <geom name="link3b_connector" type="mesh" mesh="link3b_connector" pos="0.059 0 0.3418" material="black" />
+                    <geom name="link3b_connector2" type="mesh" mesh="link3b_connector2" pos="0.059 0 0.34" material="grey" conaffinity="32" contype="32"/>
+                    <geom name="link3b" type="mesh" mesh="link3b" pos="0.059 0 0.347" material="grey" conaffinity="32" contype="32"/>
+                    <geom name="link3_cap" type="mesh" mesh="link3_cap" pos="0.0837 0 0.392" material="blue" conaffinity="32" contype="32"/>
+
+                    <body name="link4" pos="0.0173 0 0.3922" euler="-0.25 0 0">
+                        <joint name="robot:joint3" axis="-1 0 0" pos="0 0 0" limited="true" range="-6.28319 6.28319" springref="0"  damping="100" frictionloss="100" stiffness="100"/>
+                        <inertial pos="-0.05796 -0.0018 0" mass="0.0137" diaginertia="0.1 0.1 0.1"/>
+                        <geom name="link4_connector" type="mesh" mesh="link4_connector" pos="0 0 0" material="black" conaffinity="32" contype="32"/>
+                        <geom name="link4" type="mesh" mesh="link4" pos="-0.008 0 0" material="grey" conaffinity="32" contype="32"/>
+                        <geom name="link4_cap" type="mesh" mesh="link4_cap" pos="-0.05325 0 -0.0247" material="blue" conaffinity="32" contype="32"/>
+
+                        <body name="link5" pos="-0.05325 0 0.04165" euler="0 0 1.5708">
+                            <joint name="robot:joint4" axis="0 0 1" pos="0 0 0"  limited="true" range="-6.28319 6.28319" springref="0"  damping="100" frictionloss="100" stiffness="100"/>
+                            <inertial pos="0.0018 0 0.01634" mass="0.013" diaginertia="0.1 0.1 0.1"/>
+                            <geom name="link5_connector" type="mesh" mesh="link5_connector" pos="0 0 0" material="black" conaffinity="32" contype="32"/>
+                            <geom name="link5" type="mesh" mesh="link5" pos="0 0 0.0079" material="grey" conaffinity="32" contype="32"/>
+                            <geom name="link5_cap" type="mesh" mesh="link5_cap" pos="0.025 0 0.053" material="blue" conaffinity="32" contype="32"/>
+
+                            <body name="link6" pos="-0.04165 0 0.05305" euler="-.009 0 0">
+                                <joint name="robot:joint5" axis="-1 0 0" pos="0 0 0"  limited="true" range="-6.28319 6.28319" springref="0"  damping="100" frictionloss="100" stiffness="100"/>
+                                <inertial pos="-0.038841 0 0" mass="0.0365" diaginertia="0.1 0.1 0.1"/>
+                                <geom name="link6_connector" type="mesh" mesh="link6_connector" pos="0 0 0" material="black" conaffinity="32" contype="32"/>
+                                <geom name="link6" type="mesh" mesh="link6" pos="-0.008 0 0" material="grey" conaffinity="32" contype="32"/>
+
+                                <!-- gripper model-->
+                                <include file="assets/gripper.xml"/>
+
+                            </body>
+                        </body>
+                    </body>
+                </body>
+            </body>
+        </body>
+    </body>
+</mujoco>
