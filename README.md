@@ -1,7 +1,6 @@
 <h1 align="center">OpenAI Test-Bed of Contact Based Grasping for Reinforcement Learning Rob Lamprell</h1>
 <h3 align="center">Simulating GelSight Sensors within Mujoco</h3>
 
-<h3 align="left">Connect with me:</h3>
 <p align="left">
 </p>
 
