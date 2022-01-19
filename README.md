@@ -3,7 +3,7 @@
 <h3 align="center">Project Description</h3>
 <p align="left">
     This repo is a clone of my dissertation, which was submitted to the University of Liverpool 
-    as required for my Masters in Computer Science.  Within it, a tactile-based-sensor (GelSight)
+    as required for my Masters in Computer Science.  Within it, a optical-tactile-based-sensor (GelSight)
     is simulated and appeneded to UR5 arm within a Mujoco environment.  Mujoco, is a physics based 
     engine, which was utilised to train a deep reinforcement learning agent in similar environments
     found in OpenAi's gym.
