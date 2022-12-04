@@ -1,34 +1,14 @@
-<h1 align="left">Solution to 'exa-data-eng-assessment'.</h1>
+<h1 align="center">OpenAI Test-Bed of Contact Based Grasping for Reinforcement Learning</h1>
 
-<h2 align="left">Project Description</h2>
+<h3 align="center">Project Description</h3>
 <p align="left">
-    This is a solution to the EMIS-group DE test found here: https://github.com/emisgroup/exa-data-eng-assessment.
-    The solution is simple and uses Python to create a pipeline for unpacking json files and transferring them into a tabular format within a MySQL database.   Both of these are held within Docker containers.  
+    This repo is a clone of my dissertation, which was submitted to the University of Liverpool 
+    as required for my Masters in Computer Science.  Within it, two optical-tactile-based-sensors (GelSight)
+    are simulated and appended to a UR5 arm.  Mujoco is used as the simulation environment - a physics extension to
+    OpenAi's gym. This platform was utilised to construct the environments Reach, Push, Slide and PickandPlace
+    (similar to those found within gym).  Which in turn act as a test-bed for training a deep reinforcement 
+    learning agent using both Double Deep Q-Learning (DDQN) and Hierarchical Double Deep Q-Learning (HDDQN).
 </p>
 
-
-
-<h2 align="left">Quick Start</h2>
-<h3 align="left">Installation</h3>
-<p>
-<ol>
-  <li>Simply clone this Repo to your machine</li>
-  <li>Open a terminal and navigate to its location</li>
-  <li>Start by running the command below (this takes a few minutes):</li>
-      
-      docker-compose up --build
-</ol>
-    
-</p>
-
-
-<h3 align="left">Running The Pipeline</h3>
-<p align="left">
-    Open a terminal within the python_pipeline container
-    and run:
-    
-    python3 main.py
-</p>
-
-<h3 align="left">Exploring the Database</h3>
-<ul>
+<h3 align="left">Languages and Tools:</h3>
+<p align="left"> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://www.tensorflow.org" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="tensorflow" width="40" height="40"/> </a> </p>
