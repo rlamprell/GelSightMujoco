@@ -35,25 +35,18 @@
         mysql -u root -p
 </ul>
 <ul>
-    <li>Type the password (any MySQL Commands now work):</li>
+    <li>Type in the password:</li>
     
         password
 </ul>
 <ul>
-    <li>Type:
+    <li>Any MySQL Commands now work, for example:
         
-        USE emis_test_db;</li>
+        USE emis_test_db;
+        SHOW TABLES;
+        select * from Patient;</li>
 </ul>
-<ul>
-    <li>Type: 
-        
-        SHOW TABLES;</li>
-</ul>
-<ul>
-    <li>Type (only works if you've main.py from above): 
-    
-        select * from Patient; </li>
-</ul>
+
 
 
 
