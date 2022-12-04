@@ -1,11 +1,14 @@
 <h1 align="left">Solution to 'exa-data-eng-assessment'.</h1>
 
-<h3 align="left">Project Description</h3>
+<h2 align="left">Project Description</h2>
 <p align="left">
     This is a solution to the EMIS-group DE test found here: https://github.com/emisgroup/exa-data-eng-assessment.
     The solution is simple and uses Python to create a pipeline for unpacking json files and transferring them into a tabular format within a MySQL database.   Both of these are held within Docker containers.  
 </p>
 
+
+
+<h2 align="left">Quick Start</h2>
 <h3 align="left">Installation</h3>
 <p>
 <ol>
@@ -47,6 +50,26 @@
         select * from Patient;</li>
 </ul>
 
+
+
+<h2 align="left">Architecture</h2>
+<h3 align="left">Assumptions</h3>
+<ul>
+    <li>The files are local and will be batch loaded instead of streamed</li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<p align="left">
+    
+![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+
+    
+</p>
 
 
 
