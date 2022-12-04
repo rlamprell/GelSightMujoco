@@ -28,27 +28,35 @@
 </p>
 
 <h3 align="left">Exploring the Database</h3>
-<ol>
+<ul>
     <li>Open a terminal within the mysql container</li>
     <li>Enter:</li> 
-    
+        
         mysql -u root -p
-    <li>Type the password 'password' (any MySQL Commands now work)</li>
-    <li>Type 'USE emis_test_db;'</li>
-    <li>Type 'SHOW TABLES;'</li>
-    <li>Type 'select * from Patient;' (only works if you've main.py from above)</li>
-</ol>
-
-<p align="left">
-    Open a terminal within the mysql container
-    Enter mysql -u root -p
-    Type the password 'password' (any MySQL Commands now work)
-    Type 'USE emis_test_db;'
-    Type 'SHOW TABLES;'
-    Type 'select * from Patient;' (only works if you've main.py from above)
-</p>
-
-
+</ul>
+<ul>
+    <li>Type the password (any MySQL Commands now work):</li>
+    
+        password
+</ul>
+<ul>
+    <li>Type:
+        
+        USE emis_test_db;</li>
+</ul>
+<ul>
+    <li>Type: 
+        
+        SHOW TABLES;</li>
+</ul>
+<ul>
+    <li>Type (only works if you've main.py from above): 
+    
+        select * from Patient; </li>
+</ul>
+```lua
+this line is very long
+```
 <h3 align="left">Languages and Tools:</h3>
 <p align="left"> 
     <a href="https://www.python.org" target="_blank" rel="noreferrer"> 
