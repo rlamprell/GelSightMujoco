@@ -11,11 +11,11 @@
 <ol>
   <li>Simply clone this Repo to your machine</li>
   <li>Open a terminal and navigate to its location</li>
-  <li>Run:</li>
+  <li>Start by running the command below (this takes a few minutes):</li>
       
       docker-compose up --build
 </ol>
-    (this takes a few minutes)
+    
 </p>
 
 
@@ -54,9 +54,12 @@
     
         select * from Patient; </li>
 </ul>
-```lua
-this line is very long
-```
+
+
+
+
+
+
 <h3 align="left">Languages and Tools:</h3>
 <p align="left"> 
     <a href="https://www.python.org" target="_blank" rel="noreferrer"> 
