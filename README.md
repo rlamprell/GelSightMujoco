@@ -1,6 +1,6 @@
-<h1 align="center">OpenAI Test-Bed of Contact Based Grasping for Reinforcement Learning</h1>
+<h1 align="left">OpenAI Test-Bed of Contact Based Grasping for Reinforcement Learning</h1>
 
-<h3 align="center">Project Description</h3>
+<h3 align="left">Project Description</h3>
 <p align="left">
     This repo is a clone of my dissertation, which was submitted to the University of Liverpool 
     as required for my Masters in Computer Science.  Within it, two optical-tactile-based-sensors (GelSight)
