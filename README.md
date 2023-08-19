@@ -79,7 +79,58 @@
     <td>model_weights0</td>
     <td>Are you loading any weights for the first neural network?</td>
   </tr>
-  <!-- ... (continue for other parameters) ... -->
+<tr>
+    <td>model_weights1</td>
+    <td>Are you loading any weights for the second neural network (hddqn)?</td>
+  </tr>
+  <tr>
+    <td>replay_buffer_size</td>
+    <td>How many memories do you want to store?</td>
+  </tr>
+  <tr>
+    <td>batch_size</td>
+    <td>How many states do you want to select at a time to learn from</td>
+  </tr>
+  <tr>
+    <td>alpha_lr</td>
+    <td>The learning rate</td>
+  </tr>
+  <tr>
+    <td>beta_lr</td>
+    <td>The learning rate for the second neural network (hddqn)</td>
+  </tr>
+  <tr>
+    <td>nn_dense</td>
+    <td>The density of layers in the neural network post concatenation - following conv2d and any kinematics</td>
+  </tr>
+  <tr>
+    <td>nn_num_dense</td>
+    <td>The density of layers for any kinematic inputs</td>
+  </tr>
+  <tr>
+    <td>ext_nn_dense</td>
+    <td>(hddqn) The density of layers in the neural network post concatenation - following conv2d and any kinematics</td>
+  </tr>
+  <tr>
+    <td>ext_nn_num_dense</td>
+    <td>(hddqn) The density of layers for any kinematic inputs</td>
+  </tr>
+  <tr>
+    <td>transfer_model</td>
+    <td>Transfer learning from another model - conv2d only</td>
+  </tr>
+  <tr>
+    <td>type_</td>
+    <td>What type of data should be included? [vision, tactile, kinematics, raw]</td>
+  </tr>
+  <tr>
+    <td>extrinsic_type2_</td>
+    <td>(hddqn) What type of data should be included? [vision, tactile, kinematics, raw]</td>
+  </tr>
+  <tr>
+    <td>seed</td>
+    <td>Randomization seed</td>
+  </tr>
 </table>
 </body>
 </html>
