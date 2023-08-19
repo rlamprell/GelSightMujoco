@@ -11,9 +11,11 @@
 </p>
 
 ## Quick Start
+- install mujoco - https://mujoco.org/
 - git clone the repo
 - cd into repo_path/Test_bed
 - run python main.py
+- download any missing packages
 
 ## Settings
 <html>
