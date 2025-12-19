@@ -2,8 +2,7 @@
 
 <h3 align="left">Project Description</h3>
 <p align="left">
-    This repo is a clone of my dissertation, which was submitted to the University of Liverpool 
-    as required for my Masters in Computer Science.  Within it, two optical-tactile-based-sensors (GelSight)
+    This repo has two optical-tactile-based-sensors (GelSight)
     are simulated and appended to a UR5 arm.  Mujoco is used as the simulation environment - a physics extension to
     OpenAi's gym. This platform was utilised to construct the environments Reach, Push, Slide and PickandPlace
     (similar to those found within gym).  Which in turn act as a test-bed for training a deep reinforcement 
