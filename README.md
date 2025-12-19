@@ -9,6 +9,9 @@
     learning agent using both Double Deep Q-Learning (DDQN) and Hierarchical Double Deep Q-Learning (HDDQN).
 </p>
 
+## NOTE
+This project was built using Mujoco when the liscening was not free.  The repo is unlikely to receive further updates to fix any issues.
+
 ## Quick Start
 - install mujoco - https://mujoco.org/
 - git clone the repo
